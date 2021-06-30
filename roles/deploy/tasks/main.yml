@@ -1,0 +1,10 @@
+    - name: deploy war
+      deploy_war:
+                  url: "http://127.0.0.1:8080/manager/text/deploy?path=/mnt-lab&update=true"
+                  war: "{{ war }}"
+                  username: "admin"
+                  password: "admin"
+    - name:
+      template:
+              src: deploy-info.txt
+              dest: /opt/tomcat/webapps/deploy-info.txt 

@@ -1,0 +1,22 @@
+#- name: install apps
+#  hosts: group1,group2,group3
+#  remote_user: vagrant
+
+#  roles:
+#      - install_java
+#      - install_tomcat
+#      - install_nginx
+
+
+- name: second play
+  hosts: group1,group2,group3
+  remote_user: vagrant
+  vars:
+     dep_user: "Balda"
+     dep_time: "{{ ansible_date_time }}"
+  
+  roles:
+      - deploy
+
+
+
